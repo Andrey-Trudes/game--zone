@@ -1,0 +1,132 @@
+/* HOME - BENTO GRID
+   Base dos cards (.card, .azul, .azul-claro) vem do style.css.
+   Aqui: só o grid e o que é exclusivo da home. */
+
+.bento {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* "." = célula livre: os 4 jogos entram nela em ordem */
+  grid-template-areas:
+    "principal pesquisa pesquisa num1"
+    "principal ranking  ranking  num2"
+    ".         ranking  ranking  ."
+    ".         .        generos  generos"
+    "chamada   chamada  chamada  chamada";
+  gap: 14px;
+  padding: 0; /* o main já tem padding */
+}
+
+.bento .card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* posições */
+.principal        { grid-area: principal; }
+.pesquisa         { grid-area: pesquisa; justify-content: center; }
+.avaliacao, .jogadores { justify-content: center; text-align: center; }
+.avaliacao        { grid-area: num1; }
+.jogadores        { grid-area: num2; }
+.top3             { grid-area: ranking; }
+.generos          { grid-area: generos; }
+.avalie           { grid-area: chamada; align-items: flex-start; }
+
+/* destaque */
+.principal img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.principal h2 { font-size: 22px; }
+.selo {
+  align-self: flex-start;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  font-size: 12px;
+}
+.nota-grande { font-size: 48px; font-weight: bold; }
+
+/* busca */
+.pesquisa input {
+  padding: 10px;
+  border: 1px solid #93c5fd;
+  border-radius: 8px;
+}
+
+/* números */
+.avaliacao strong, .jogadores strong { font-size: 32px; color: #2563eb; }
+
+/* ranking */
+.top3 ol { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.top3 li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 10px;
+  background: #eef2f7;
+}
+.top3 li span { flex: 1; font-weight: bold; }
+.top3 li b { color: #2563eb; }
+.top3 li em { font-style: normal; font-weight: bold; color: #1b2b5b; }
+
+/* jogos */
+.cartao-jogos { position: relative; }
+.cartao-jogos img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.cartao-jogos .nota {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  padding: 3px 8px;
+  border-radius: 8px;
+  background: #1b2b5b;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: bold;
+}
+.estrelas { color: #f59e0b; }
+
+/* gêneros */
+.generos div { display: flex; flex-wrap: wrap; gap: 8px; }
+.generos a {
+  padding: 5px 14px;
+  border-radius: 20px;
+  background: #dbeafe;
+  color: #1e40af;
+  font-size: 13px;
+}
+
+/* botão (.card a pinta de azul, por isso .card .botao) */
+.card .botao {
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+/* azul da nav (#1b2b5b) nos cards azuis da home */
+.bento .azul { background: #1b2b5b; }
+.azul .botao { background: #ffffff; color: #1b2b5b; }
+
+/* celular: 1 coluna */
+@media (max-width: 700px) {
+  .bento {
+    grid-template-columns: 1fr;
+    grid-template-areas: none;
+  }
+  .bento > *,
+  .jogadores { grid-area: auto; }
+}
