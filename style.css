@@ -291,6 +291,48 @@ main {
   text-decoration: underline;
 }
 
+/* LAYOUT SIMPLES - PÁGINAS INTERNAS */
+
+.lista-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.lista-cards .card {
+  flex: 1 1 220px;
+  max-width: 300px;
+}
+
+.secao-equipe {
+  background: #1b2b5b;
+  color: #ffffff;
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 20px;
+}
+
+.secao-equipe h2 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.secao-equipe p {
+  color: #dbeafe;
+  font-size: 14px;
+}
+
+.secao-equipe i {
+  color: #ffffff;
+}
+
+.titulo-secao {
+  font-size: 24px;
+  margin-bottom: 18px;
+  color: #1e293b;
+}
+
 footer {
   text-align: center;
   color: #64748b;
