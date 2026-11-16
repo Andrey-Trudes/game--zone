@@ -1,6 +1,6 @@
-/*
-   CONFIGURAÇÃO GERAL
- */
+/* ==========================================================================
+   GERAL — Compartilhado por todas as páginas
+   ========================================================================== */
 
 * {
   box-sizing: border-box;
@@ -14,7 +14,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* CABEÇALHO GAME ZONE*/
+/* CABEÇALHO */
 
 .cabecalho {
   display: flex;
@@ -27,17 +27,13 @@ body {
   border-radius: 0 0 10px 10px;
 }
 
-/* LOGO */
-
 .logo {
   display: flex;
   align-items: center;
   gap: 40px;
-
   color: #ffffff;
   font-size: 40px;
   font-weight: bold;
-
   text-transform: uppercase;
 }
 
@@ -48,23 +44,17 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-
   gap: 8px;
-
   list-style: none;
 }
 
 .menu a {
   display: block;
-
   color: #dbeafe;
   text-decoration: none;
-
   font-size: 14px;
-
   padding: 8px 16px;
   border-radius: 8px;
-
   transition:
     background 0.3s,
     color 0.3s;
@@ -76,8 +66,6 @@ body {
   color: #ffffff;
 }
 
-/* PÁGINA ATUAL (aceita aria-current e a classe .ativo) */
-
 .menu a[aria-current="page"],
 .menu a.ativo {
   background: #ffffff;
@@ -85,124 +73,23 @@ body {
   font-weight: bold;
 }
 
-/*
-   CONTEÚDO PRINCIPAL
- */
-
 main {
   max-width: 1100px;
   margin: 30px auto;
   padding: 20px;
 }
 
-/*
-   NOTÍCIAS
- */
-
-.noticias {
-  margin-bottom: 35px;
-}
-
-.noticias h2 {
-  font-size: 24px;
-  margin-bottom: 18px;
-
-  color: #1e293b;
-}
-
-/*
-   CARDS DAS NOTÍCIAS*/
-
-.card-noticia {
-  display: flex;
-  align-items: flex-start;
-
-  gap: 15px;
-
-  background: #ffffff;
-
-  padding: 16px;
-  margin-bottom: 15px;
-
-  border-radius: 12px;
-
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
-
-  transition: 0.3s;
-}
-
-/* EFEITO DO CARD */
-
-.card-noticia:hover {
-  transform: translateY(-3px);
-
-  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
-}
-
-/*
-   IMAGENS DAS NOTÍCIAS
- */
-
-.card-noticia img {
-  width: 90px;
-  height: 132px;
-
-  object-fit: cover;
-
-  border-radius: 8px;
-
-  flex-shrink: 0;
-}
-
-/*
-   INFORMAÇÕES DAS NOTÍCIAS*/
-
-.informacoes {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  gap: 7px;
-}
-
-.informacoes h3 {
-  font-size: 17px;
-  color: #1e293b;
-}
-
-.informacoes p {
-  font-size: 14px;
-  color: #64748b;
-}
-
-.informacoes small {
-  font-size: 11px;
-  color: #64748b;
-}
-
-/* AVALIAÇÕES*/
-
-.avaliacao span {
-  color: #64748b;
-  font-size: 12px;
-}
-
-/*  BOTÃO DE CURTIR*/
+/* BOTÃO DE CURTIR */
 
 .btn-curtir {
   margin-top: 12px;
-
   padding: 7px 14px;
-
   border: 1px solid #2563eb;
   border-radius: 8px;
-
   background: transparent;
   color: #2563eb;
-
   cursor: pointer;
   font-size: 14px;
-
   transition: 0.3s;
 }
 
@@ -211,20 +98,7 @@ main {
   color: #ffffff;
 }
 
-/*BENTO GRID - OUTRAS PÁGINAS*/
-
-.bento-grid {
-  display: grid;
-
-  grid-template-columns: repeat(4, 1fr);
-
-  gap: 14px;
-
-  max-width: 1000px;
-  margin: 0 auto;
-
-  padding: 20px;
-}
+/* CARDS BASE */
 
 .card {
   background: #ffffff;
@@ -245,53 +119,9 @@ main {
 .card i {
   font-size: 32px;
   color: #2563eb;
-
   margin-bottom: 10px;
-
   display: block;
 }
-
-/* TAMANHOS DOS CARDS */
-
-.largo {
-  grid-column: span 2;
-}
-
-.alto {
-  grid-row: span 2;
-}
-
-.grande {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-
-/* CARD AZUL */
-
-.azul {
-  background: #2563eb;
-  color: #ffffff;
-}
-
-.azul p {
-  color: #dbeafe;
-}
-
-.azul i {
-  color: #ffffff;
-}
-
-/* CARD AZUL CLARO */
-
-.azul-claro {
-  background: #dbeafe;
-}
-
-.azul-claro i {
-  color: #1e40af;
-}
-
-/* LINKS DOS CARDS */
 
 .card a {
   color: #2563eb;
@@ -302,7 +132,222 @@ main {
   text-decoration: underline;
 }
 
-/* LAYOUT SIMPLES - PÁGINAS INTERNAS */
+/* TAMANHOS DOS CARDS */
+
+.largo {
+  grid-column: span 2;
+}
+.alto {
+  grid-row: span 2;
+}
+.grande {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+/* CORES DOS CARDS */
+
+.azul {
+  background: #2563eb;
+  color: #ffffff;
+}
+.azul p {
+  color: #dbeafe;
+}
+.azul i {
+  color: #ffffff;
+}
+
+.azul-claro {
+  background: #dbeafe;
+}
+.azul-claro i {
+  color: #1e40af;
+}
+
+/* RODAPÉ */
+
+footer {
+  text-align: center;
+  color: #64748b;
+  font-size: 13px;
+  padding: 20px;
+}
+
+/* POP UP DE ANÁLISE */
+
+#popup-analise {
+  margin: auto;
+  border: none;
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 480px;
+  width: calc(100% - 32px);
+}
+
+#popup-analise::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================================================================
+   NOTÍCIAS — noticias.html
+   ========================================================================== */
+
+.noticias {
+  margin-bottom: 35px;
+}
+
+.noticias h2 {
+  font-size: 24px;
+  margin-bottom: 18px;
+  color: #1e293b;
+}
+
+.card-noticia {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  background: #ffffff;
+  padding: 16px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.card-noticia:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
+}
+
+.card-noticia img {
+  width: 90px;
+  height: 132px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.informacoes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+}
+
+.informacoes h3 {
+  font-size: 17px;
+  color: #1e293b;
+}
+.informacoes p {
+  font-size: 14px;
+  color: #64748b;
+}
+.informacoes small {
+  font-size: 11px;
+  color: #64748b;
+}
+
+.avaliacao span {
+  color: #64748b;
+  font-size: 12px;
+}
+
+/* ==========================================================================
+   JOGOS / RANKINGS — jogos.html
+   ========================================================================== */
+
+.caixa {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 22px;
+  min-height: 70vh;
+}
+
+.caixa h2 {
+  font-size: 24px;
+}
+
+.dica {
+  color: #64748b;
+  font-size: 14px;
+  margin: 4px 0 24px;
+}
+
+.generos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.genero h3 {
+  font-size: 18px;
+  color: #2563eb;
+}
+
+.genero p {
+  color: #64748b;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.ranking {
+  list-style: none;
+  margin-top: 10px;
+  counter-reset: posicao;
+}
+
+.ranking li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px solid #e2e8f0;
+  font-size: 15px;
+  counter-increment: posicao;
+}
+
+.ranking li::before {
+  content: counter(posicao);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #e2e8f0;
+  color: #475569;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.ranking li:first-child::before {
+  background: #facc15;
+  color: #713f12;
+}
+
+.ranking .nome {
+  flex: 1;
+}
+
+.ranking .btn-curtir {
+  margin-top: 0;
+  padding: 6px 12px;
+}
+
+/* ==========================================================================
+   EQUIPE — equipe.html
+   ========================================================================== */
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
 .lista-cards {
   display: flex;
@@ -328,12 +373,10 @@ main {
   font-size: 20px;
   margin-bottom: 6px;
 }
-
 .secao-equipe p {
   color: #dbeafe;
   font-size: 14px;
 }
-
 .secao-equipe i {
   color: #ffffff;
 }
@@ -344,29 +387,9 @@ main {
   color: #1e293b;
 }
 
-/* POP UP DE ANÁLISE (<dialog id="popup-analise">) */
-
-#popup-analise {
-  margin: auto; /* centraliza (o reset "* { margin: 0 }" removeria isso) */
-  border: none;
-  border-radius: 12px;
-  padding: 24px;
-  max-width: 480px;
-  width: calc(100% - 32px);
-}
-
-#popup-analise::backdrop {
-  background: rgba(0, 0, 0, 0.5);
-}
-
-footer {
-  text-align: center;
-  color: #64748b;
-  font-size: 13px;
-  padding: 20px;
-}
-
-/* RESPONSIVIDADE */
+/* ==========================================================================
+   RESPONSIVIDADE
+   ========================================================================== */
 
 @media (max-width: 700px) {
   main {
@@ -401,5 +424,11 @@ footer {
   .alto {
     grid-column: span 1;
     grid-row: span 1;
+  }
+}
+
+@media (max-width: 800px) {
+  .generos {
+    grid-template-columns: 1fr;
   }
 }
