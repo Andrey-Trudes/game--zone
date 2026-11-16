@@ -1,119 +1,147 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Game Zone - Rankings</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Zone - Rankings</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
+  </head>
+  <body>
+    <header class="cabecalho">
+      <span class="logo"><i class="bx bx-game"></i> Game Zone</span>
+      <nav class="menu" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="noticias.html">Notícias</a></li>
+          <li><a href="jogos.html" aria-current="page">Rankings</a></li>
+          <li><a href="equipe.html">Equipe</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <header class="cabecalho">
-    <span class="logo"><i class="bx bx-game"></i> Game Zone</span>
-    <nav class="menu" aria-label="Navegação principal">
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="noticias.html">Notícias</a></li>
-        <li><a href="jogos.html" aria-current="page">Rankings</a></li>
-        <li><a href="equipe.html">Sobre</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Uma caixa só com todo o ranking -->
+    <main class="caixa">
+      <h2>Rankings por gênero</h2>
+      <p class="dica">Curta os seus jogos favoritos de cada gênero.</p>
 
-  <!-- Uma caixa só com todo o ranking -->
-  <main class="caixa">
+      <div class="generos">
+        <section class="genero">
+          <h3>RPG</h3>
+          <p>Crie seu herói e viva uma história de aventuras.</p>
+          <ol class="ranking">
+            <li>
+              <span class="nome">Elden Ring</span>
+              <button class="btn-curtir">
+                <i class="bx bx-heart"></i> <span class="curtidas">0</span>
+              </button>
+            </li>
+            <li>
+              <span class="nome">Baldur's Gate 3</span>
+              <button class="btn-curtir">
+                <i class="bx bx-heart"></i> <span class="curtidas">0</span>
+              </button>
+            </li>
+            <li>
+              <span class="nome">The Witcher 3</span>
+              <button class="btn-curtir">
+                <i class="bx bx-heart"></i> <span class="curtidas">0</span>
+              </button>
+            </li>
+            <li>
+              <span class="nome">Skyrim</span>
+              <button class="btn-curtir">
+                <i class="bx bx-heart"></i> <span class="curtidas">0</span>
+              </button>
+            </li>
+            <li>
+              <span class="nome">Final Fantasy VII</span>
+              <button class="btn-curtir">
+                <i class="bx bx-heart"></i> <span class="curtidas">0</span>
+              </button>
+            </li>
+          </ol>
+        </section>
 
-    <h2>Rankings por gênero</h2>
-    <p class="dica">Curta os seus jogos favoritos de cada gênero.</p>
+        <section class="genero">
+          <h3>Tiro</h3>
+          <p>Ação rápida e reflexo.</p>
+          <ol class="ranking">
+            <li>
+              <span class="nome">Counter-Strike 2</span>
+              <button class="btn-curtir">
+                <i class="bx bx-heart"></i> <span class="curtidas">0</span>
+              </button>
+            </li>
+            <li>
+              <span class="nome">Valorant</span>
+              <button class="btn-curtir">
+                <i class="bx bx-heart"></i> <span class="curtidas">0</span>
+              </button>
+            </li>
+            <li>
+              <span class="nome">Apex Legends</span>
+              <button class="btn-curtir">
+                <i class="bx bx-heart"></i> <span class="curtidas">0</span>
+              </button>
+            </li>
+            <li>
+              <span class="nome">Call of Duty: Warzone</span>
+              <button class="btn-curtir">
+                <i class="bx bx-heart"></i> <span class="curtidas">0</span>
+              </button>
+            </li>
+            <li>
+              <span class="nome">Overwatch 2</span>
+              <button class="btn-curtir">
+                <i class="bx bx-heart"></i> <span class="curtidas">0</span>
+              </button>
+            </li>
+          </ol>
+        </section>
 
-    <div class="generos">
+        <section class="genero">
+          <h3>Corrida</h3>
+          <p>Velocidade, curvas e muita adrenalina.</p>
+          <ol class="ranking">
+            <li>
+              <span class="nome">Forza Horizon 5</span>
+              <button class="btn-curtir">
+                <i class="bx bx-heart"></i> <span class="curtidas">0</span>
+              </button>
+            </li>
+            <li>
+              <span class="nome">Mario Kart 8</span>
+              <button class="btn-curtir">
+                <i class="bx bx-heart"></i> <span class="curtidas">0</span>
+              </button>
+            </li>
+            <li>
+              <span class="nome">Gran Turismo 7</span>
+              <button class="btn-curtir">
+                <i class="bx bx-heart"></i> <span class="curtidas">0</span>
+              </button>
+            </li>
+            <li>
+              <span class="nome">Need for Speed Heat</span>
+              <button class="btn-curtir">
+                <i class="bx bx-heart"></i> <span class="curtidas">0</span>
+              </button>
+            </li>
+            <li>
+              <span class="nome">Assetto Corsa</span>
+              <button class="btn-curtir">
+                <i class="bx bx-heart"></i> <span class="curtidas">0</span>
+              </button>
+            </li>
+          </ol>
+        </section>
+      </div>
+    </main>
 
-    <section class="genero">
-      <h3>RPG</h3>
-      <p>Crie seu herói e viva uma história de aventuras.</p>
-      <ol class="ranking">
-        <li>
-          <span class="nome">Elden Ring</span>
-          <button class="btn-curtir"><i class="bx bx-heart"></i> <span class="curtidas">0</span></button>
-        </li>
-        <li>
-          <span class="nome">Baldur's Gate 3</span>
-          <button class="btn-curtir"><i class="bx bx-heart"></i> <span class="curtidas">0</span></button>
-        </li>
-        <li>
-          <span class="nome">The Witcher 3</span>
-          <button class="btn-curtir"><i class="bx bx-heart"></i> <span class="curtidas">0</span></button>
-        </li>
-        <li>
-          <span class="nome">Skyrim</span>
-          <button class="btn-curtir"><i class="bx bx-heart"></i> <span class="curtidas">0</span></button>
-        </li>
-        <li>
-          <span class="nome">Final Fantasy VII</span>
-          <button class="btn-curtir"><i class="bx bx-heart"></i> <span class="curtidas">0</span></button>
-        </li>
-      </ol>
-    </section>
-
-    <section class="genero">
-      <h3>Tiro</h3>
-      <p>Ação rápida e reflexo.</p>
-      <ol class="ranking">
-        <li>
-          <span class="nome">Counter-Strike 2</span>
-          <button class="btn-curtir"><i class="bx bx-heart"></i> <span class="curtidas">0</span></button>
-        </li>
-        <li>
-          <span class="nome">Valorant</span>
-          <button class="btn-curtir"><i class="bx bx-heart"></i> <span class="curtidas">0</span></button>
-        </li>
-        <li>
-          <span class="nome">Apex Legends</span>
-          <button class="btn-curtir"><i class="bx bx-heart"></i> <span class="curtidas">0</span></button>
-        </li>
-        <li>
-          <span class="nome">Call of Duty: Warzone</span>
-          <button class="btn-curtir"><i class="bx bx-heart"></i> <span class="curtidas">0</span></button>
-        </li>
-        <li>
-          <span class="nome">Overwatch 2</span>
-          <button class="btn-curtir"><i class="bx bx-heart"></i> <span class="curtidas">0</span></button>
-        </li>
-      </ol>
-    </section>
-
-    <section class="genero">
-      <h3>Corrida</h3>
-      <p>Velocidade, curvas e muita adrenalina.</p>
-      <ol class="ranking">
-        <li>
-          <span class="nome">Forza Horizon 5</span>
-          <button class="btn-curtir"><i class="bx bx-heart"></i> <span class="curtidas">0</span></button>
-        </li>
-        <li>
-          <span class="nome">Mario Kart 8</span>
-          <button class="btn-curtir"><i class="bx bx-heart"></i> <span class="curtidas">0</span></button>
-        </li>
-        <li>
-          <span class="nome">Gran Turismo 7</span>
-          <button class="btn-curtir"><i class="bx bx-heart"></i> <span class="curtidas">0</span></button>
-        </li>
-        <li>
-          <span class="nome">Need for Speed Heat</span>
-          <button class="btn-curtir"><i class="bx bx-heart"></i> <span class="curtidas">0</span></button>
-        </li>
-        <li>
-          <span class="nome">Assetto Corsa</span>
-          <button class="btn-curtir"><i class="bx bx-heart"></i> <span class="curtidas">0</span></button>
-        </li>
-      </ol>
-    </section>
-
-    </div>
-
-  </main>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
