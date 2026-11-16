@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Avaliações de Games</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="styleindex.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/styleindex.css" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -15,11 +15,13 @@
   <body>
     <header class="cabecalho">
       <span class="logo"><i class="bx bx-game"></i> Game Zone</span>
-      <nav class="menu">
-        <a class="ativo" href="index.html">Início</a>
-        <a href="noticias.html">Notícias</a>
-        <a href="jogos.html">Rankings</a>
-        <a href="equipe.html">Sobre</a>
+      <nav class="menu" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html" aria-current="page">Início</a></li>
+          <li><a href="noticias.html">Notícias</a></li>
+          <li><a href="jogos.html">Rankings</a></li>
+          <li><a href="equipe.html">Sobre</a></li>
+        </ul>
       </nav>
     </header>
 
@@ -30,8 +32,22 @@
         <div class="nota-grande">9.8</div>
         <h2>Zelda: Tears of the Kingdom</h2>
         <p>Exploração, criatividade e um mundo que parece infinito.</p>
-        <a class="botao" href="#">Ler análise</a>
+        <button id="btn-analise">Leia a análise</button>
       </section>
+
+      <dialog class="analise" id="popup-analise">
+        <h2>Análise de Tears of the Kingdom</h2>
+        <p>
+          A maioria dos jogadores adora Tears of the Kingdom: elogiam a
+          liberdade de exploração, a criatividade do Ultrahand e do Fuse, a
+          história e a trilha sonora. Os críticos dizem que parece um “Breath of
+          the Wild maior” e que as mecânicas de construção cansam. A nota dos
+          usuários no Metacritic ficou perto de 8,1 a 8,4 em 2023, abaixo dos
+          cerca de 96 da crítica. Esses números podem ter mudado, então vale
+          conferir o valor atual.
+        </p>
+        <button id="fechar-analise">Fechar</button>
+      </dialog>
 
       <!-- <section class="card pesquisa azul-claro">
             <h2>Procure um game</h2>
@@ -110,4 +126,5 @@
 
     <footer>© 2026 Game Zone - Projeto acadêmico</footer>
   </body>
+  <script src="script.js"></script>
 </html>

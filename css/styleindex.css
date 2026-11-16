@@ -39,10 +39,10 @@
 .principal {
   grid-area: principal;
 }
-.pesquisa {
+/* .pesquisa {
   grid-area: pesquisa;
   justify-content: center;
-}
+} */
 .avaliacao {
   grid-area: num1;
 }
@@ -83,11 +83,11 @@
   font-weight: bold;
 }
 .selo {
-  align-self: flex-start;
   padding: 4px 12px;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.15);
   font-size: 12px;
+  width: fit-content; /*serve para o selo não ocupar toda a largura do card, apenas o necessário */
 }
 
 /* BUSCA */
@@ -184,6 +184,36 @@
 .azul .botao {
   background: #fff;
   color: var(--azul);
+}
+
+#popup-analise {
+  border: none;
+  border-radius: 12px;
+  margin: auto;
+  justify-content: center;
+  padding: 24px;
+  max-width: 480px;
+}
+#popup-analise::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* botão que fecha a analise do game zelda */
+#fechar-analise {
+  background: var(--azul-vivo);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+}
+
+/*botao para dar a análise do game zelda */
+#btn-analise {
+  background: var(--azul-vivo);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
 }
 
 /* CELULAR: 1 coluna */
