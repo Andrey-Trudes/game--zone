@@ -15,10 +15,10 @@
   gap: 14px;
   /* "." = célula livre: os 4 cards de jogos entram nelas em ordem */
   grid-template-areas:
-    "principal pesquisa pesquisa num1"
+    "principal .        .        num1"
     "principal ranking  ranking  num2"
     ".         ranking  ranking  ."
-    ".         generos  chamada .";
+    "generos   generos  chamada  chamada";
 }
 
 .bento > section {
@@ -39,10 +39,6 @@
 .principal {
   grid-area: principal;
 }
-/* .pesquisa {
-  grid-area: pesquisa;
-  justify-content: center;
-} */
 .avaliacao {
   grid-area: num1;
 }
@@ -88,13 +84,6 @@
   background: rgba(255, 255, 255, 0.15);
   font-size: 12px;
   width: fit-content; /*serve para o selo não ocupar toda a largura do card, apenas o necessário */
-}
-
-/* BUSCA */
-.pesquisa input {
-  padding: 10px;
-  border: 1px solid #93c5fd;
-  border-radius: 8px;
 }
 
 /* NÚMEROS */
@@ -190,7 +179,6 @@
   border: none;
   border-radius: 12px;
   margin: auto;
-  justify-content: center;
   padding: 24px;
   max-width: 480px;
 }
@@ -198,22 +186,15 @@
   background: rgba(0, 0, 0, 0.5);
 }
 
-/* botão que fecha a analise do game zelda */
-#fechar-analise {
-  background: var(--azul-vivo);
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 8px 16px;
-}
-
-/*botao para dar a análise do game zelda */
+/* botão que fecha a analise do game zelda, e de abrir, pois os dois tem o mesmo estilo*/
+#fechar-analise,
 #btn-analise {
   background: var(--azul-vivo);
   color: #fff;
   border: none;
   border-radius: 8px;
   padding: 8px 16px;
+  cursor: pointer;
 }
 
 /* CELULAR: 1 coluna */
